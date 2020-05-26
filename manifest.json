@@ -3,7 +3,7 @@
   "manifest_version": 2,
   "name": "Earliest DM",
   "version": "0.1.4",
-  "description": "Scroll up a webpage within a specified period at a specified pace",
+  "description": "Scroll up a webpage at specified pace, It can scroll up your twitter DM!",
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -23,7 +23,13 @@
     "scripts": ["js/background.js"],
     "persistent": false
   },
-  "permissions": ["*://*/*", "declarativeContent", "storage", "<all_urls>"],
+  "permissions": [
+    "*://*/*",
+    "tabs",
+    "declarativeContent",
+    "storage",
+    "<all_urls>"
+  ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

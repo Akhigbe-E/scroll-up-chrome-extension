@@ -22,12 +22,19 @@
 
  */
 
-window.addEventListener('click', function (e) {
-    chrome.runtime.sendMessage({ speed: '1' }, function (res) {
-    });
-}, false);
+window.addEventListener('click', e => {
+    if (typeof chrome.app.isInstalled !== 'undefined') {
+        chrome.tabs.query({ currentWindow: true, active: true }, tabArray => {
+            chrome.runtime.sendMessage(tabArray[0].id, { speed: '1' });
+        })
+    }
+}, false)
 
-window.addEventListener('keydown', function (e) {
-    chrome.runtime.sendMessage({ speed: '1' }, function (res) {
-    });
+
+window.addEventListener('keydown', e => {
+    if (typeof chrome.app.isInstalled !== 'undefined') {
+        chrome.tabs.query({ currentWindow: true, active: true }, tabArray => {
+            chrome.runtime.sendMessage(tabArray[0].id, { speed: '1' });
+        })
+    }
 }, false);
