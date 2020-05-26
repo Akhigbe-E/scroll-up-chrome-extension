@@ -1,7 +1,7 @@
 {
   "update_url": "http://clients2.google.com/service/update2/crx",
   "manifest_version": 2,
-  "name": "Earliest DM",
+  "name": "Scroll Up",
   "version": "0.1.4",
   "description": "Scroll up a webpage at specified pace, It can scroll up your twitter DM!",
   "browser_action": {
