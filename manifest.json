@@ -4,7 +4,7 @@
   "name": "Earliest DM",
   "version": "0.1.4",
   "description": "Scroll up a webpage within a specified period at a specified pace",
-  "page_action": {
+  "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "images/get_started16.png",
@@ -23,16 +23,11 @@
     "scripts": ["js/background.js"],
     "persistent": false
   },
-  "options_page": "options.html",
-  "browser_action": {
-    "default_title": "",
-    "default_icon": "icons/autoscroll.png"
-  },
   "permissions": ["*://*/*", "declarativeContent", "storage", "<all_urls>"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["js/simple_autoscroll.js"],
+      "js": ["js/scroll.js"],
       "run_at": "document_start"
     }
   ]
