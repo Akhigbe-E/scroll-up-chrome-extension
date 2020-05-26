@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', e => {
 }, false);
 
 const viewStatus = (id, msg) => {
-    S
     var status = document.getElementById(id);
     status.innerHTML = msg;
     setTimeout(() => { status.innerHTML = ""; }, 1 * 1000);
